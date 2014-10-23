@@ -3,6 +3,9 @@ build/
 packages/
 .buildlog
 
+# Don’t commit the following directories, which are in development
+web/xml/
+
 # Or the files created by dart2js.
 *.dart.js
 *.dart.precompiled.js
