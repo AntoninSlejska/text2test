@@ -1,0 +1,46 @@
+/*In the file: vendor/drmonthy/chosen/css have to be display:inline-block changed to display:block.*/
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+  color: #333;
+}
+
+#header {
+  padding: 10px;
+}
+#form {
+  overflow: auto;
+  min-height: 300px;
+}
+#mainColumn {
+  float: left;
+  padding: 10px;
+  width: 80%;
+}
+#minorColumn {
+  top: 0px;
+  padding: 10px;
+}
+#formText {
+  width: 100%;
+}
+.ok {
+  color: #006600;
+}
+.er {
+  color: red;
+}
+.embeddedTest {
+  margin-left: -15px;
+  margin-right: -10px;
+}
+button {
+  display:block;
+}
+h1 {
+  cursor:pointer;
+}

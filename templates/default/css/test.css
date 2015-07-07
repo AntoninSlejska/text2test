@@ -1,0 +1,28 @@
+body {
+  background-color: #F8F8F8;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.2em;
+  margin: 15px;
+  color: #333;
+}
+
+#description {
+  font-style: italic;
+  padding-bottom: 15px;
+}
+#title {
+  font-weight: bold;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+#origin {
+  display: none;
+}
+#control {
+  padding-top: 20px;
+}
+#solution {
+  display: none;
+}
