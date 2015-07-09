@@ -66,7 +66,7 @@ if ($row->css == "") {
 }
 
 $externalCodes = "";
-$rows = $db -> query("SELECT ec.type, ec.src, ec.relative_url FROM ExternalCodes ec INNER JOIN TestTypes2ExternalCodes tt2ec ON ec.id = tt2ec.external_code_id WHERE tt2ec.test_type_id = $testTypeId ORDER BY ec.type");
+$rows = $db -> query("SELECT ec.type, ec.src, ec.relative_url FROM ExternalCodes ec INNER JOIN TestTypes2ExternalCodes tt2ec ON ec.id = tt2ec.external_code_id WHERE tt2ec.test_type_id = $testTypeId ORDER BY ec.type, ec.id ASC");
 foreach ($rows as $row) {
 	if ($row['relative_url'] == 1) {
 		$extCodeSrc = $base_url . $row['src'];

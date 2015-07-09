@@ -14,7 +14,7 @@ $(document).ready(function(){
     textAfterChange.append(paragraph);
   }
   var originalText = "";
-  for (var i = 0; i < paragraphs.length; i++) {
+  for (i = 0; i < paragraphs.length; i++) {
     originalText += "<p>"+paragraphs[solution[i]]+"</p>";
   }
 

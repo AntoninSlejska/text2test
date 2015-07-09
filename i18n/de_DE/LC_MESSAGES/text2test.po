@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: text2test\n"
-"POT-Creation-Date: 2015-07-06 17:28+0100\n"
-"PO-Revision-Date: 2015-07-06 17:32+0100\n"
+"POT-Creation-Date: 2015-07-09 16:26+0100\n"
+"PO-Revision-Date: 2015-07-09 16:28+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: de_DE\n"
@@ -47,12 +47,12 @@ msgid "Choose your language"
 msgstr "Wählen Sie Ihre Sprache"
 
 #: i18n/main.js.php:25
-msgid "Choose a level"
-msgstr "Wählen Sie Ihre Ebene"
+msgid "Choose your language level"
+msgstr "Wählen Sie Ihre Sprachniveau"
 
 #: i18n/main.js.php:26
-msgid "Level"
-msgstr "Ebene"
+msgid "Language level"
+msgstr "Sprachniveau"
 
 #: i18n/main.js.php:27
 msgid "Choose a text"
@@ -120,9 +120,15 @@ msgstr "Der Test wurde nicht gespeichert. Die Fehlermeldung:"
 
 #: i18n/main.js.php:43
 msgid "Check the highlighted fields and try to save the form again."
-msgstr "Überprüfen Sie die markierten Felder und versuchen Sie das Formular erneut zu speichern."
+msgstr ""
+"Überprüfen Sie die markierten Felder und versuchen Sie das Formular erneut "
+"zu speichern."
 
-#: i18n/main.js.php:45
+#: i18n/main.js.php:44
+msgid "The code is on GitHub."
+msgstr "Der Code ist auf GitHub."
+
+#: i18n/main.js.php:46
 msgid "internationalisation"
 msgstr "Internationalisierung"
 
@@ -133,6 +139,12 @@ msgstr "Sie können den Test auf der folgenden Adresse finden"
 #: test.php:50
 msgid "Source"
 msgstr "Quelle"
+
+#~ msgid "Choose a level"
+#~ msgstr "Wählen Sie Ihre Ebene"
+
+#~ msgid "Level"
+#~ msgstr "Ebene"
 
 #~ msgid "test3"
 #~ msgstr "TTTTTTT"

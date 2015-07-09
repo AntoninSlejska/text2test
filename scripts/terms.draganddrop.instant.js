@@ -12,7 +12,7 @@ $(document).ready(function(){
     if (solution[i].length > inputSize) {
       inputSize = solution[i].length;
     }
-  };
+  }
   var textToChange = $("#text").text();
   var textAfterChange = "<p>" + textToChange
     .replace(/{{/g, '<input type="text" size="'+inputSize+'" name="')
@@ -20,15 +20,13 @@ $(document).ready(function(){
     .replace(/\\n\\n/g, '</p><p>')
     .replace(/\\n/g, '</p><p>')
     .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '</p><p>')
-    + "</p>";
+    .replace(/\n/g, '</p><p>') + "</p>";
   var originalText = "<p>" + textToChange
     .replace(/{{(\d+)}}/g, function(m,p1){return '<b>'+solution[p1]+'</b>';})
     .replace(/\\n\\n/g, '</p><p>')
     .replace(/\\n/g, '</p><p>')
     .replace(/\n\n/g, '</p><p>')
-    .replace(/\n/g, '</p><p>')
-    + "</p>";
+    .replace(/\n/g, '</p><p>') + "</p>";
   $("#text").html(textAfterChange);
   $("#origin").html(originalText);
 
