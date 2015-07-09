@@ -41,6 +41,7 @@ echo 'testCreatedErI18n = "' . _('The test was not created. The error message:')
 echo 'testSentOkI18n = "' . _('The test was successfully saved.') . '",';
 echo 'testSentErI18n = "' . _('The test was not saved. The error message:') . '",';
 echo 'incorrectFormI18n = "' . _('Check the highlighted fields and try to save the form again.') . '",';
+echo 'sourceCodeOnGitHubI18n = "' . _('The code is on GitHub.') . '",';
 // echo 'I18n = "' . _('') . '",';
 echo 'i18n = "' . _('internationalisation') . '";';
 ?>
