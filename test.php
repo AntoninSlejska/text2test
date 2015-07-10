@@ -106,6 +106,6 @@ echo '<!DOCTYPE html>
 			'.$textSource.'
 		</div>
 		<div id="control"></div>
-		<div id="solution">'.$solution.'</div>
+		<div id="solution">'.$solution.'</div>'.$tracking_code.'
 	</body>
 </html>';

@@ -34,6 +34,6 @@ echo '<!DOCTYPE html>
       <div id="mainColumn"></div>
       <div id="minorColumn"></div>
     </div>
-    <div id="footer"></div>
+    <div id="footer"></div>'.$tracking_code.'
   </body>
 </html>';

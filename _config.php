@@ -14,4 +14,5 @@ $template_name = "default";
 $default_language = "de";
 $default_level = "b1";
 $minimise_code = true; // true: minimises the JavasSript und CSS codes; false: is used for development
+$tracking_code = ""; // e.g. Google Analytics Tracking Code
 ?>
