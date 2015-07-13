@@ -177,7 +177,7 @@ $(document).ready(function(){
             solutionString = searchString.replace(startString,"");
             solutionString = solutionString.replace(endString,"");
             solutionToSave.push(solutionString);
-            return startString+"{{"+order+"}}"+endString;
+            return startString+"\{\{"+order+"\}\}"+endString;
           });
           if (solutionString === "") break;
           order += 1;
@@ -213,7 +213,7 @@ $(document).ready(function(){
             }
           }
           if (wordOrder > 3 && theTermIsUnique) {
-            replacement = p1+"{{"+termOrder+"}}"+p3;
+            replacement = p1+"\{\{"+termOrder+"\}\}"+p3;
             solutionToSave[termOrder] = p2;
             wordOrder = 0;
             termOrder+=1;

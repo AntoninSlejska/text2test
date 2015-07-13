@@ -15,14 +15,14 @@ $(document).ready(function(){
   }
   var textToChange = $("#text").text();
   var textAfterChange = "<p>" + textToChange
-    .replace(/{{/g, '<input type="text" size="'+inputSize+'" name="')
-    .replace(/}}/g, '" class="testInput">')
+    .replace(/\{\{/g, '<input type="text" size="'+inputSize+'" name="')
+    .replace(/\}\}/g, '" class="testInput">')
     .replace(/\\n\\n/g, '</p><p>')
     .replace(/\\n/g, '</p><p>')
     .replace(/\n\n/g, '</p><p>')
     .replace(/\n/g, '</p><p>') + "</p>";
   var originalText = "<p>" + textToChange
-    .replace(/{{(\d+)}}/g, function(m,p1){return '<b>'+solution[p1]+'</b>';})
+    .replace(/\{\{(\d+)\}\}/g, function(m,p1){return '<b>'+solution[p1]+'</b>';})
     .replace(/\\n\\n/g, '</p><p>')
     .replace(/\\n/g, '</p><p>')
     .replace(/\n\n/g, '</p><p>')
