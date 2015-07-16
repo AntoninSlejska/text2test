@@ -139,7 +139,6 @@ $(document).ready(function(){
     testToSave          = $("textarea#formText").val(),
     solutionToSave      = [],
     textConvertTerms    = [],
-    textConvertOptions  = [],
     textConvertFunction = "";
 
     $.ajax({
@@ -149,7 +148,6 @@ $(document).ready(function(){
       dataType: "json",
       success: function(response){
         textConvertTerms = response.terms.split('\\\\');
-        textConvertOptions = response.opts.split('\\\\');
         textConvertFunction = response.functionName;
       },
       error: function(response){

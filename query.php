@@ -82,9 +82,8 @@ switch (isset($_GET['q']) ? $_GET['q'] : '') {
     	$id = mysql_real_escape_string(isset($_GET['id']) ? $_GET['id'] : '0');
     	$row = $db->fetch('SELECT * FROM TestTypes WHERE id="'.$id.'" LIMIT 1');
     	$terms		= $row->terms;
-      $options		= $row->options;
     	$function	= $row->function;
-    	$json		= array('terms' => $terms, 'opts' => $options, 'functionName' => $function);
+    	$json		= array('terms' => $terms, 'functionName' => $function);
     	header("Content-Type: application/json", true);
     	echo json_encode($json);
     case "":
