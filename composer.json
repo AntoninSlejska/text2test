@@ -3,6 +3,7 @@
         "components/jquery": "^2.1",
         "dibi/dibi": "^2.3",
         "drmonty/chosen": "^1.4",
-        "components/jqueryui": "^1.11"
+        "components/jqueryui": "^1.11",
+        "components/font-awesome": "^4.3"
     }
 }

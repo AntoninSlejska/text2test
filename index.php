@@ -18,6 +18,7 @@ echo '<!DOCTYPE html>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" type="text/css" href="'.$main_css.'">
     <link rel="stylesheet" type="text/css" href="vendor/drmonty/chosen/css/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/components/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href="templates/'.$template_name.'/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="vendor/components/jquery/jquery.min.js"></script>
     <script type="text/javascript" src="vendor/drmonty/chosen/js/chosen.jquery.min.js"></script>
@@ -26,6 +27,10 @@ echo '<!DOCTYPE html>
     <script type="text/javascript" src="'.$functions_js.'"></script>
   </head>
   <body>
+    <div id="icons">
+      <i class="fa fa-language fa-lg"></i>
+      <i class="fa fa-home fa-lg"></i>
+    </div>
     <div id="header">
       <h1>text2test</h1>
       <div id="messages"></div>

@@ -129,6 +129,13 @@ $(document).ready(function(){
   $("h1").click(function(){
     location.reload();
   });
+  $(".fa-home").click(function(){
+    location.reload();
+  });
+  $(".fa-language").click(function(){
+    document.cookie = 'language=; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    location.reload();
+  });
 
   selectTestType.change(function(){
     $("#messages").empty();
