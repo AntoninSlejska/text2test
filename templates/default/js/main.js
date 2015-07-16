@@ -136,7 +136,7 @@ $(document).ready(function(){
     formText.hide();
     if (lastAction == "selectText") selectedTextId = selectText.val();
     var testTypeIdToSave    = selectTestType.val(),
-    testToSave          = htmlEscape($("textarea#formText").val()),
+    testToSave          = $("textarea#formText").val(),
     solutionToSave      = [],
     textConvertTerms    = [],
     textConvertOptions  = [],
@@ -170,9 +170,9 @@ $(document).ready(function(){
         while (true) {
           var solutionString = "";
           testToSave = testToSave.replace(re, function replacer(searchString){
-            var startString = searchString.match("^[ \n\r\t.,;'\"\+!?-]+");
+            var startString = searchString.match("^[ \n\r\t.,;:'\"\+!?-]+");
             if (startString === null) startString = "";
-            var endString = searchString.match("[ \n\r\t.,;'\"\+!?-]+$");
+            var endString = searchString.match("[ \n\r\t.,;:'\"\+!?-]+$");
             if (endString === null) endString = "";
             solutionString = searchString.replace(startString,"");
             solutionString = solutionString.replace(endString,"");
@@ -203,7 +203,7 @@ $(document).ready(function(){
       case "replaceRandomTerms":
         var wordOrder = 0;
         var termOrder = 0;
-        re = new RegExp("(^\|[ \n\r\t.,;'\"\+!?-]+)(["+allUnicodeLetters+"]{5,})([ \n\r\t.,;'\"\+!?-]+\|$)", "g");
+        re = new RegExp("(^\|[ \n\r\t.,;:'\"\+!?-]+)(["+allUnicodeLetters+"]{5,})([ \n\r\t.,;:'\"\+!?-]+\|$)", "g");
         testToSave = testToSave.replace(re, function(match,p1,p2,p3){
           var replacement = "";
           theTermIsUnique = true;
@@ -224,11 +224,28 @@ $(document).ready(function(){
           return replacement;
         });
         break;
+        case "replaceAllWords":
+          var wordOrder = 0;
+          re = new RegExp("(^\|[ \n\r\t.,;:'\"\+!?-]+)(["+allUnicodeLetters+"]+)([ \n\r\t.,;:'\"\+!?-]+\|$)", "g");
+          function replaceWords(match,p1,p2,p3){
+            var replacement = p1+"\{\{"+wordOrder+"\}\}"+p3;
+            solutionToSave[wordOrder] = p2;
+            wordOrder+=1;
+            return replacement
+            };
+          testToSave = testToSave
+            .replace(re, replaceWords)
+            .replace(re, replaceWords)
+            .replace(re, replaceWords)
+            .replace(/([\.\:\!\?]+)([\"\'\)\}\]]*)([\s\n\r]+)/g,"$1$2\\")
+            .replace(/([\n\r]+)/g, '');
+          break;
       default:
       break;
     }
 
     solutionToSaveString = solutionToSave.join("\\\\");
+    testToSave = htmlEscape(testToSave);
     var dataString = {language:selectedLanguage,text:selectedTextId,testtype:testTypeIdToSave,test:testToSave,solution:solutionToSaveString};
     $.ajax({
       url: "query.php?q=savetest",
