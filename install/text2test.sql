@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 16. Jul 2015 um 12:20
+-- Erstellungszeit: 16. Jul 2015 um 13:05
 -- Server Version: 5.6.24-0ubuntu2
 -- PHP-Version: 5.6.4-4ubuntu6.2
 
@@ -269,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `Tests` (
   `level` char(2) NOT NULL,
   `save` tinyint(1) NOT NULL,
   `public` tinyint(1) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -298,7 +298,7 @@ INSERT INTO `TestTypes` (`id`, `language`, `title`, `description`, `terms`, `fun
 (2, 'de', 'Präpositionen einsetzen', 'Setzen Sie die fehlenden Präpositionen ein.', 'à\\\\À\\\\ab\\\\Ab\\\\abgesehen\\\\Abgesehen\\\\abseits\\\\Abseits\\\\abzüglich\\\\Abzüglich\\\\ähnlich\\\\Ähnlich\\\\als\\\\Als\\\\am\\\\Am\\\\an\\\\An\\\\anfangs\\\\Anfangs\\\\angelegentlich\\\\Angelegentlich\\\\angesichts\\\\Angesichts\\\\anhand\\\\Anhand\\\\anlässlich\\\\Anlässlich\\\\ans\\\\Ans\\\\anstatt\\\\Anstatt\\\\anstelle\\\\Anstelle\\\\auf\\\\Auf\\\\aufgrund\\\\Aufgrund\\\\aufs\\\\Aufs\\\\aufseiten\\\\Aufseiten\\\\aus\\\\Aus\\\\ausgangs\\\\Ausgangs\\\\ausgenommen\\\\Ausgenommen\\\\ausschließlich\\\\Ausschließlich\\\\außer\\\\Außer\\\\außerhalb\\\\Außerhalb\\\\ausweislich\\\\Ausweislich\\\\bar\\\\Bar\\\\behufs\\\\Behufs\\\\bei\\\\Bei\\\\beiderseits\\\\Beiderseits\\\\beidseits\\\\Beidseits\\\\beim\\\\Beim\\\\betreffs\\\\Betreffs\\\\bezüglich\\\\Bezüglich\\\\binnen\\\\Binnen\\\\bis\\\\Bis\\\\bis auf\\\\Bis Auf\\\\contra\\\\Contra\\\\dank\\\\Dank\\\\diesseits\\\\Diesseits\\\\durch\\\\Durch\\\\einbezüglich\\\\Einbezüglich\\\\eingangs\\\\Eingangs\\\\eingedenk\\\\Eingedenk\\\\einschließlich\\\\Einschließlich\\\\entgegen\\\\Entgegen\\\\entlang\\\\Entlang\\\\entsprechend\\\\Entsprechend\\\\exklusive\\\\Exklusive\\\\fern\\\\Fern\\\\fernab\\\\Fernab\\\\frei\\\\Frei\\\\für\\\\Für\\\\fürs\\\\Fürs\\\\gegen\\\\Gegen\\\\gegenüber\\\\Gegenüber\\\\gelegentlich\\\\Gelegentlich\\\\gemäß\\\\Gemäß\\\\gen\\\\Gen\\\\getreu\\\\Getreu\\\\gleich\\\\Gleich\\\\halber\\\\Halber\\\\hinsichtlich\\\\Hinsichtlich\\\\hinter\\\\Hinter\\\\hinterm\\\\Hinterm\\\\hinters\\\\Hinters\\\\im\\\\Im\\\\in\\\\In\\\\in puncto\\\\In Puncto\\\\infolge\\\\Infolge\\\\inklusive\\\\Inklusive\\\\inmitten\\\\Inmitten\\\\innerhalb\\\\Innerhalb\\\\innert\\\\Innert\\\\ins\\\\Ins\\\\je\\\\Je\\\\jenseits\\\\Jenseits\\\\kontra\\\\Kontra\\\\kraft\\\\Kraft\\\\lang\\\\Lang\\\\längs\\\\Längs\\\\längsseits\\\\Längsseits\\\\laut\\\\Laut\\\\links\\\\Links\\\\mangels\\\\Mangels\\\\minus\\\\Minus\\\\mit\\\\Mit\\\\mithilfe\\\\Mithilfe\\\\mitsamt\\\\Mitsamt\\\\mittels\\\\Mittels\\\\nach\\\\Nach\\\\nächst\\\\Nächst\\\\nah\\\\Nah\\\\nahe\\\\Nahe\\\\namens\\\\Namens\\\\neben\\\\Neben\\\\nebst\\\\Nebst\\\\nördlich\\\\Nördlich\\\\nordöstlich\\\\Nordöstlich\\\\nordwestlich\\\\Nordwestlich\\\\ob\\\\Ob\\\\oberhalb\\\\Oberhalb\\\\ohne\\\\Ohne\\\\östlich\\\\Östlich\\\\per\\\\Per\\\\plus\\\\Plus\\\\pro\\\\Pro\\\\quer\\\\Quer\\\\rechts\\\\Rechts\\\\rücksichtlich\\\\Rücksichtlich\\\\samt\\\\Samt\\\\seit\\\\Seit\\\\seitab\\\\Seitab\\\\seitens\\\\Seitens\\\\seitlich\\\\Seitlich\\\\seitwärts\\\\Seitwärts\\\\sonder\\\\Sonder\\\\statt\\\\Statt\\\\südlich\\\\Südlich\\\\südöstlich\\\\Südöstlich\\\\südwestlich\\\\Südwestlich\\\\trotz\\\\Trotz\\\\über\\\\Über\\\\überm\\\\Überm\\\\übern\\\\Übern\\\\übers\\\\Übers\\\\um\\\\Um\\\\ums\\\\Ums\\\\unbeschadet\\\\Unbeschadet\\\\unerachtet\\\\Unerachtet\\\\unfern\\\\Unfern\\\\ungeachtet\\\\Ungeachtet\\\\unter\\\\Unter\\\\unterhalb\\\\Unterhalb\\\\unterm\\\\Unterm\\\\untern\\\\Untern\\\\unters\\\\Unters\\\\unweit\\\\Unweit\\\\vermittels\\\\Vermittels\\\\vermittelst\\\\Vermittelst\\\\vermöge\\\\Vermöge\\\\via\\\\Via\\\\vis-à-vis\\\\Vis-À-Vis\\\\voll\\\\Voll\\\\vom\\\\Vom\\\\von\\\\Von\\\\vonseiten\\\\Vonseiten\\\\vor\\\\Vor\\\\vorbehaltlich\\\\Vorbehaltlich\\\\während\\\\Während\\\\wegen\\\\Wegen\\\\weniger\\\\Weniger\\\\westlich\\\\Westlich\\\\wider\\\\Wider\\\\wie\\\\Wie\\\\willen\\\\Willen\\\\zeit\\\\Zeit\\\\zu\\\\Zu\\\\zufolge\\\\Zufolge\\\\zugunsten\\\\Zugunsten\\\\zulasten\\\\Zulasten\\\\zulieb\\\\Zulieb\\\\zuliebe\\\\Zuliebe\\\\zum\\\\Zum\\\\zur\\\\Zur\\\\zusätzlich\\\\Zusätzlich\\\\zuungunsten\\\\Zuungunsten\\\\zuwider\\\\Zuwider\\\\zuzuglich\\\\Zuzuglich\\\\zuzüglich\\\\Zuzüglich\\\\zwecks\\\\Zwecks\\\\zwischen\\\\Zwischen', 'replaceTerms', 'terms.write.instant', '', 1),
 (3, 'de', 'Abschnitte ordnen', 'Ordnen Sie die durcheinander gebrachten Abschnitte so, dass ein zusammenhängender Text ensteht.', '', 'disorderParagraphs', 'paragraphs.order.onrequest', 'paragraphs.order', 1),
 (4, 'de', 'Sätze vervollständigen', 'Ziehen Sie die passenden Wörter in die Lücken.', '', 'replaceRandomTerms', 'terms.draganddrop.instant', 'terms.draganddrop', 1),
-(5, 'de', 'Wörter ordnen', 'Ordnen Sie die Wörter in der richtigen Reihenfolge an.', '', 'replaceAllWords', 'randomizedwords.draganddrop.instant', 'terms.draganddrop', 1);
+(5, 'de', 'Wörter ordnen', 'Ordnen Sie die Wörter in der richtigen Reihenfolge an.', '', 'replaceAllWords', 'randomizedwords.draganddrop.instant', 'randomizedwords.draganddrop', 1);
 
 -- --------------------------------------------------------
 
@@ -430,7 +430,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT für Tabelle `Tests`
 --
 ALTER TABLE `Tests`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT für Tabelle `TestTypes`
 --
