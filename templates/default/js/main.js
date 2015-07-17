@@ -56,6 +56,9 @@ $(document).ready(function(){
   selectLanguage.change(function(){
     selectedLanguage = $(this).val();
     document.cookie = "language="+selectedLanguage;
+    if (currentLanguageI18n != selectedLanguage) {
+      location.reload();
+    }
     selectLevel.appendTo("#mainColumn");
     chosen("#selectLevel");
     formText.appendTo("#mainColumn");

@@ -6,16 +6,19 @@ use Dibi\Dibi;
 $db = new DibiConnection($database_configuration);
 
 if (isset($_COOKIE['language'])) {
-  $locale = $db->fetchSingle('SELECT locale FROM Languages WHERE code="'.$_COOKIE['language'].'"');
+  $currentLanguage = $_COOKIE['language'];
 } else {
-  $locale = $db->fetchSingle('SELECT locale FROM Languages WHERE code="'.$default_language.'"');
+  $currentLanguage = $default_language;
 }
+$locale = $db->fetchSingle('SELECT locale FROM Languages WHERE code="'.$currentLanguage.'"');
+
 putenv("LC_ALL=$locale");
 setlocale(LC_ALL, $locale);
 bindtextdomain($text_domain,$base_dir."/i18n");
 textdomain($text_domain);
 
-echo 'var showSolutionI18n = "' . _('Show the solution') . '",';
+echo 'var currentLanguageI18n = "' . $currentLanguage . '",';
+echo 'showSolutionI18n = "' . _('Show the solution') . '",';
 echo 'showOriginI18n = "' . _('Show the original text') . '",';
 echo 'showTestI18n = "' . _('Show the test') . '",';
 echo 'checkTestI18n = "' . _('Check the test') . '",';
