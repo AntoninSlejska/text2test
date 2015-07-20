@@ -239,8 +239,8 @@ $(document).ready(function(){
             var replacement = p1+"\{\{"+wordOrder+"\}\}"+p3;
             solutionToSave[wordOrder] = p2;
             wordOrder+=1;
-            return replacement
-            };
+            return replacement;
+            }
           testToSave = testToSave
             .replace(re, replaceWords)
             .replace(re, replaceWords)
@@ -372,6 +372,6 @@ $(document).ready(function(){
     }
   });
   if ($(window).width() > 800) {
-    sourceCodeOnGitHub.appendTo($("#footer"));
+    sourceCodeOnGitHub.appendTo($("footer"));
   }
 });
