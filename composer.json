@@ -4,8 +4,6 @@
         "dibi/dibi": "^2.3",
         "drmonty/chosen": "^1.4",
         "components/jqueryui": "^1.11",
-        "components/font-awesome": "^4.3",
-        "dg/rss-php": "^1.2",
-        "html2text/html2text": "^2.0"
+        "components/font-awesome": "^4.3"
     }
 }
