@@ -10,6 +10,7 @@ function htmlUnescape(str){
     return String(str)
         .replace(/&quot;/g, '"')
         .replace(/&#39;/g, "'")
+        .replace(/&#039;/g, "'")
         .replace(/&lt;/g, '<')
         .replace(/&gt;/g, '>')
         .replace(/&amp;/g, '&')
