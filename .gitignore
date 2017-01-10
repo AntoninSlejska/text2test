@@ -1,9 +1,23 @@
+# phpstorm project files
+# .idea
+
+# netbeans project files
+nbproject
+
+# zend studio for eclipse project files
+# .buildpath
+# .project
+# .settings
+
+# windows thumbnail cache
+Thumbs.db
+
+# composer
+composer.phar
+composer.lock
+
 vendor/
 backup/
 help/
 composer.phar
 config.php
-
-# Commit your application's lock file http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file
-# You may choose to ignore a library lock file http://getcomposer.org/doc/02-libraries.md#lock-file
-# composer.lock

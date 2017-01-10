@@ -4,11 +4,15 @@ $base_url = 'http://www.yourdomain.org/text2test/';
 $base_dir = '/var/www/vhosts/yourdomain.org/text2test';
 $text_domain = 'text2test';
 $database_configuration = array(
-    'driver'   => 'mysql',
+    'driver'   => 'mysqli',
     'host'     => 'localhost',
     'database' => 'text2test',
-    'username' => '',
-    'password' => ',',
+    'username' => 'username',
+    'password' => '***',
+    'options' => [
+        MYSQLI_OPT_CONNECT_TIMEOUT => 30,
+    ],
+    'flags' => MYSQLI_CLIENT_COMPRESS,
 );
 $template_name = "default";
 $default_language = "de";
