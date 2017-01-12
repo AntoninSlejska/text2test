@@ -36,7 +36,7 @@ switch (isset($_GET['q']) ? $_GET['q'] : '') {
         try {
             dibi::query("INSERT INTO [Texts]", $text_arr);
             echo $db->getInsertId();
-        } catch (DibiException $ex) {
+        } catch (DibiException $e) {
             echo get_class($e), ': ', $e->getMessage(), "\n";
         }
 
@@ -54,7 +54,7 @@ switch (isset($_GET['q']) ? $_GET['q'] : '') {
         try {
             dibi::query("INSERT INTO [Tests]", $test_arr);
             echo $test_arr['secret'];
-        } catch (DibiException $ex) {
+        } catch (DibiException $e) {
             echo get_class($e), ': ', $e->getMessage(), "\n";
         }
 
