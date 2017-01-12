@@ -17,6 +17,7 @@ composer.phar
 composer.lock
 
 vendor/
+components/
 backup/
 help/
 composer.phar
